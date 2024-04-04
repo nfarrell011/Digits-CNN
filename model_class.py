@@ -1,23 +1,28 @@
-import torch
-import torchvision
-from torch.utils.data import DataLoader
-from torch.utils.data import Dataset
-from torchvision import datasets
-from torchvision.transforms import ToTensor
-from torchvision.io import read_image
-from torchvision.transforms import ToTensor, Lambda
-import torchvision.models as models
+"""
+    Problem Set 5: Recognition Using Deep Networks
+    Joseph Nelson Farrell & Harshil Bhojwani 
+    5330 Computer Vision and Pattern Recognition
+    Northeastern University
+    Bruce Maxwell, PhD.
+    4.1.2024
+    
+    This file contains a library of PyTorch NerualNetwork classes.
+
+    Classes List (in order):
+
+        1. NeuralNetwork (original)
+        2. NeuralNetwork_2 (original with additional convolutional layer)
+        3. NeuralNetwork_3 (NeuralNetwork_2 with 3x3 filters)
+"""
+# import packages
 from torch import nn
 import torch.nn.functional as F
-import torch.optim as opt
-
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-
-import os
 
 class NeuralNetwork(nn.Module):
+    """
+        Convolutional Neural Network
+            * 2 convolutional layers with 5x5 fitlers.
+    """
     def __init__(self):
         super(NeuralNetwork, self).__init__()
 
@@ -58,6 +63,10 @@ class NeuralNetwork(nn.Module):
 
     
 class NeuralNetwork_2(nn.Module):
+    """
+        Convolutional Neural Network
+            * 3 convolutional layers with 5x5 fitlers.
+    """
     def __init__(self):
         super(NeuralNetwork_2, self).__init__()
 
@@ -106,6 +115,10 @@ class NeuralNetwork_2(nn.Module):
         return F.log_softmax(x, dim=1)
 
 class NeuralNetwork_3(nn.Module):
+    """
+        Convolutional Neural Network
+            * 3 convolutional layers with 3x3 fitlers.
+    """
     def __init__(self):
         super(NeuralNetwork_3, self).__init__()
 

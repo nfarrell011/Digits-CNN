@@ -1,6 +1,6 @@
 """
     Problem Set 5: Recognition Using Deep Networks: Task 1
-    Joseph Nelson Farrell
+    Joseph Nelson Farrell & Harshil Bhojwani 
     5330 Computer Vision and Pattern Recognition
     Northeastern University
     Bruce Maxwell, PhD.
@@ -8,7 +8,6 @@
     
     This file will test the trained NeualNetwork on the first 10 digits in the digits dataset.
 """
-
 # functions are in seperate files, utils and utils_plots
 from utils import get_load_digits_data
 from utils import get_saved_model
@@ -33,14 +32,11 @@ def main(argv):
         Returns:
             None
     """
-
     # set parameters
-    #n_epochs = 5
     batch_size_train = 64
     batch_size_test = 1000
     learning_rate = 0.01
     momentum = 0.5
-    #log_interval = 10
     random_seed = 42
     num_images_test = 10
     model_file = 'results/model.pth'

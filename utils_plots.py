@@ -1,6 +1,6 @@
 """
     Problem Set 5: Recognition Using Deep Networks
-    Joseph Nelson Farrell
+    Joseph Nelson Farrell & Harshil Bhojwani 
     5330 Computer Vision and Pattern Recognition
     Northeastern University
     Bruce Maxwell, PhD.
@@ -414,7 +414,7 @@ def plot_greek_accuracy_and_loss(epochs_for_x_axis, train_accuracy_list, train_l
     return None
 
 ###################################################################################################################################################
-def plot_grid_search_results(results_frame, n_epochs, save_path, save_name):
+def plot_grid_search_results(results_frame, batches, save_path, save_name):
     """
         Function: plot_grid_search_results
             This function will plot the accuracy score of each model that was trained in a gridsearch.
@@ -427,8 +427,8 @@ def plot_grid_search_results(results_frame, n_epochs, save_path, save_name):
         Returns: 
             None.
     """
-    models_list = ["Model 1", "Model_2", "Model_3"]
-    batches = [32, 64, 128]
+    #models_list = ["Model 1", "Model 2", "Model 3"]
+    #batches = [32, 64, 128]
     cols = results_frame.columns
     i = 0
     for model_ in cols:
@@ -464,7 +464,7 @@ def plot_grid_search_results(results_frame, n_epochs, save_path, save_name):
                 plt.xlabel('Epochs', weight = 'bold')
                 plt.ylabel('Accuracy (%)', weight = 'bold')
                 plt.text(0.5, 1.13, 
-                        f'{models_list[i]}', 
+                        f'Model {i + 1}', 
                         fontsize = 18, 
                         ha='center', 
                         va='bottom', 

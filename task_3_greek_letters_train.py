@@ -15,7 +15,6 @@
 # functions are in seperate files, utils and utils_plots
 from utils import get_saved_model
 from utils import train_loop
-from utils import GreekTransform
 from utils import get_transform_greek_letters
 from utils_plots import plot_greek_accuracy_and_loss
 from utils_plots import plot_example_images_with_labels
@@ -25,7 +24,6 @@ import torch.optim as opt
 import os
 import torch
 from torch import nn
-import torchvision
 import numpy as np
 import sys
 
@@ -116,7 +114,7 @@ def main(argv):
 
     # extract examples to plot
     examples = enumerate(greek_train)
-    batch_idx, (example_data, example_target) = next(examples)
+    _, (example_data, example_target) = next(examples)
 
     # plot some examples
     greek_letter_example_fig = 'greek_example_images.png'
@@ -148,7 +146,7 @@ def main(argv):
 
     # extract examples to plot
     examples = enumerate(greek_train_homebrew)
-    batch_idx, (example_data, example_target) = next(examples)
+    _, (example_data, example_target) = next(examples)
     print(example_target)
 
     # plot some examples

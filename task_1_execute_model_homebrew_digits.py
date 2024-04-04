@@ -1,6 +1,6 @@
 """
     Problem Set 5: Recognition Using Deep Networks: Task 1
-    Joseph Nelson Farrell
+    Joseph Nelson Farrell & Harshil Bhojwani 
     5330 Computer Vision and Pattern Recognition
     Northeastern University
     Bruce Maxwell, PhD.
